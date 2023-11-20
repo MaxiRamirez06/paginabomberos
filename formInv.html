@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- llamada static -->
+{% load static %} 
+<!-- llamada hoja de estilo -->
+<link rel="stylesheet" href="{% static 'css/styleFormInv.css' %}">
+<div class="container mt-3 ">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+            <form name="inventario" class="form needs-validation Invform" id="myForm"novalidate>
+                  <div class="mb-3">
+                    <label for="inventario">Seleccione camion</label>
+                    <select class="form-select" aria-label="Default select example" placeholder="R2 0 B2">
+                      <option value="1">R2</option>
+                      <option value="2">B2</option>
+                    </select>
+                    <small class="form-text text-muted">R2 o B2</small>
+                  </div>
+                  <div class="mb-3">
+                      <label for="inventario">Categoria herramienta</label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Eliga una opcion</option>
+                        <option value="1">Equipos de Extinción de Incendios</option>
+                        <option value="2">Equipos de Rescate</option>
+                        <option value="3">Herramientas de Mano</option>
+                        <option value="4">Equipos de Iluminación</option>
+                        <option value="5">Equipos de Comunicación</option>
+                        <option value="6">Equipos Médicos de Primeros Auxilios</option>
+                        <option value="7">Equipos de Control de Tráfico</option>
+                        <option value="8">Materiales Absorbentes de Derrames</option>
+                        <option value="9">Herramientas de Apuntalamiento</option>
+                        <option value="10">Equipos de Protección Personal</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inventario">Estado de herramienta</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Eliga una opcion</option>
+                      <option value="1">Buen estado</option>
+                      <option value="2">Medio</option>
+                      <option value="3">Malo</option>
+                    </select>
+                  </div>
+                  <div class=" mb-3">
+                      <label for="inventario">Horas de vida útil</label>
+                      <input type="number" class="form-control" id="validationCustom02" placeholder="Herramnienta" required>
+                 </div>
+                  <center><button class="btn btn-primary mt-3" type="">Enviar</button></center>
+              </form>
+        </div>
+    </div>
+</div>
+      
+{% endblock content %}
